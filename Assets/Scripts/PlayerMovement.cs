@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     public int maxAngle = 45;
     [Range(50, 500)]
     public int sensitivity = 200;
+    public float dashForce = 10f;
+    public float lastDashTime = 0f;
+    public float dashCooldown = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Jump") && isOnGround) {
             playerRb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time > lastDashTime + dashCooldown) {
+            Debug.Log("Dash");
+            playerRb.AddForce(transform.forward * dashForce, ForceMode.Impulse);
+            lastDashTime = Time.time;
         }
 
         // Orientation following the mouse movements, source : https://stackoverflow.com/questions/66248977/camera-follow-player-when-moving-mouse-with-unity-3d
