@@ -8,6 +8,8 @@ TagManager:
   - Ability
   - AbilityShield
   - AbilityFeathers
+  - Enemy
+  - Heal
   layers:
   - Default
   - TransparentFX
