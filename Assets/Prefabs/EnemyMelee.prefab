@@ -103,7 +103,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 9.45
+  m_Radius: 100
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7425775244545997023
 GameObject:
@@ -270,7 +270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f11613e9c2a4d44bad968af446bdb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTriggered: 0
   playerObject: {fileID: 0}
-  speed: 5
+  speed: 35
   enemyRb: {fileID: 0}
   health: 5
+  healObject: {fileID: 3619705395206604603, guid: 5c6219bd880b04442afa7d0b26020193, type: 3}
+  repulsiveForce: 20

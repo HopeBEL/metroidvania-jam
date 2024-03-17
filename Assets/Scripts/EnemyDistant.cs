@@ -29,10 +29,10 @@ public class EnemyDistant : Enemy
         if (isTriggered && !isInRange) {
             enemyRb.AddForce(direction.normalized * speed); 
 
-            if (direction.magnitude < 10f) 
+            if (direction.magnitude < 100f) 
                 isInRange = true;
         }
-        else if (direction.magnitude >= 10f) 
+        else if (direction.magnitude >= 100f) 
             isInRange = false;
     }
 
@@ -56,7 +56,7 @@ public class EnemyDistant : Enemy
             Debug.Log("Collision with player");
         }
         else if (other.gameObject.CompareTag("AbilityFeathers")) {
-            health -= 3;
+            health -= 5;
         }
         else if (other.gameObject.CompareTag("AbilityShield")) {
             health -= 1;

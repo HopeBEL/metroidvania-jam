@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    protected bool isTriggered = false;
+    public bool isTriggered = false;
     public GameObject playerObject;
     public float speed = 5f;
     public Rigidbody enemyRb;

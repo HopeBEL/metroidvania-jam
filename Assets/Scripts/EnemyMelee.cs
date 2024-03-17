@@ -44,7 +44,7 @@ public class EnemyMelee : Enemy
             Attack();
         }
         else if (other.gameObject.CompareTag("AbilityFeathers")) {
-            health -= 2;
+            health -= 5;
         }
         else if (other.gameObject.CompareTag("AbilityShield")) {
             Debug.Log("Ici collision avec le shield");

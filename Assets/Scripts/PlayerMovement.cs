@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -60,6 +61,10 @@ public class PlayerMovement : MonoBehaviour
         camRotation.x = Mathf.Clamp(camRotation.x, minAngle, maxAngle);
         cam.localEulerAngles = camRotation;
 
+        if (transform.position.y <= -25f) {
+                Debug.Log("Game Over !");
+                SceneManager.LoadScene(2);
+            }
     }
 
     // If we collide with the ground, then we can jump again
