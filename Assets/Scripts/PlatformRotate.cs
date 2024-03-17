@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformRotate : MonoBehaviour
 {
     public GameObject target;
+    public float speed = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,6 @@ public class PlatformRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(target.transform.position, Vector3.up, 20 * Time.deltaTime);
+        transform.RotateAround(target.transform.position, Vector3.up, speed * Time.deltaTime);
     }
 }

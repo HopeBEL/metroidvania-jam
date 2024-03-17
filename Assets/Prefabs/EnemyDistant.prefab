@@ -103,7 +103,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 9.45
+  m_Radius: 150
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6787724827361166177
 GameObject:
@@ -270,10 +270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55430e2bd169c64c89b758bb875ea14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTriggered: 0
   playerObject: {fileID: 0}
-  speed: 10
+  speed: 30
   enemyRb: {fileID: 0}
   health: 5
+  healObject: {fileID: 3619705395206604603, guid: 5c6219bd880b04442afa7d0b26020193, type: 3}
   isInRange: 0
   canAttack: 1
   magicSpellPrefab: {fileID: 8802715116887664949, guid: feba803443195264ea0f5f4c7e150dcd, type: 3}
